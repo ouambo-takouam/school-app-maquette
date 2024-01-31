@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projet scolaire - Liste utilisateurs</title>
+    <title>Projet scolaire - Liste Élèves</title>
     <!-- CSS TYLES -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
@@ -74,7 +74,7 @@
 
         <div class="header__navigation m-r-30 border-b">
           <div class="header__wrapper">
-            <h1 class="header__title">Utilisateurs</h1>
+            <h1 class="header__title">Classes</h1>
             <div class="header__actions">
               <div class="grouped__btn">
                 <a href="/school-app-maquette/users/users-add.php" class="btn primary">
@@ -90,7 +90,7 @@
                       d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
                     />
                   </svg>
-                  Nouveau utilisateur
+                  Nouvelle classe
                 </a>
                 <button class="btn primary">
                   <svg
@@ -129,7 +129,7 @@
             </svg>
             <input
               type="search"
-              placeholder="Rechercher par nom d'utilisateur"
+              placeholder="Rechercher par nom"
             />
           </div>
           <div class="topbar__settings">
@@ -167,19 +167,17 @@
             <table>
               <thead>
                 <tr>
-                  <th>Nom</th>
-                  <th>Email</th>
-                  <th>Telephone</th>
-                  <th>Role</th>
+                  <th>Section</th>
+                  <th>Classe</th>
+                  <th>Nombre d'eleves</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Ato Bernard</td>
-                  <td>ato@gmail.com</td>
-                  <td>(238) 454 545 445</td>
-                  <td>Enseignant</td>
+                  <td>Secondaire</td>
+                  <td>6M1</td>
+                  <td>45</td>
                   <td class="table__row__btn__wrapper">
                     <button class="btn table__row__btn secondary outlined">
                       <svg
@@ -198,24 +196,23 @@
                     <div class="table__row__modal box">
                       <ul>
                         <li>
-                          <button>Voir</button>
+                          <a class="table__row__modal__link" href="/school-app-maquette/matieres/gestion-matieres.php">Affecter les matieres</a>
                         </li>
                         <li>
-                          <button>Modifier</button>
+                          <button class="table__row__modal__link">Modifier</button>
                         </li>
                         <li>
                           <!-- Trigger/Open The Modal -->
-                          <button class="danger" id="deactivate">Desactiver</button>
+                          <button class="danger table__row__modal__link" id="deactivate">Desactiver</button>
                         </li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Ato Bernard</td>
-                  <td>ato@gmail.com</td>
-                  <td>(238) 454 545 445</td>
-                  <td>Enseignant</td>
+                  <td>Secondaire</td>
+                  <td>5M1</td>
+                  <td>38</td>
                   <td class="table__row__btn__wrapper">
                     <button class="btn table__row__btn secondary outlined">
                       <svg
@@ -234,23 +231,23 @@
                     <div class="table__row__modal box">
                       <ul>
                         <li>
-                          <button>Voir</button>
+                          <a class="table__row__modal__link" href="/school-app-maquette/matieres/gestion-matieres.php">Affecter les matieres</a>
                         </li>
                         <li>
-                          <button>Modifier</button>
+                          <button class="table__row__modal__link">Modifier</button>
                         </li>
                         <li>
-                          <button class="danger">Desactiver</button>
+                          <!-- Trigger/Open The Modal -->
+                          <button class="danger table__row__modal__link" id="deactivate">Desactiver</button>
                         </li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Ato Bernard</td>
-                  <td>ato@gmail.com</td>
-                  <td>(238) 454 545 445</td>
-                  <td>Enseignant</td>
+                  <td>Secondaire</td>
+                  <td>4Esp</td>
+                  <td>22</td>
                   <td class="table__row__btn__wrapper">
                     <button class="btn table__row__btn secondary outlined">
                       <svg
@@ -269,48 +266,14 @@
                     <div class="table__row__modal box">
                       <ul>
                         <li>
-                          <button>Voir</button>
+                          <a class="table__row__modal__link" href="/school-app-maquette/matieres/gestion-matieres.php">Affecter les matieres</a>
                         </li>
                         <li>
-                          <button>Modifier</button>
+                          <button class="table__row__modal__link">Modifier</button>
                         </li>
                         <li>
-                          <button class="danger">Desactiver</button>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ato Bernard</td>
-                  <td>ato@gmail.com</td>
-                  <td>(238) 454 545 445</td>
-                  <td>Enseignant</td>
-                  <td class="table__row__btn__wrapper">
-                    <button class="btn table__row__btn secondary outlined">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-three-dots-vertical"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
-                        />
-                      </svg>
-                    </button>
-                    <div class="table__row__modal box">
-                      <ul>
-                        <li>
-                          <button>Voir</button>
-                        </li>
-                        <li>
-                          <button>Modifier</button>
-                        </li>
-                        <li>
-                          <button class="danger">Desactiver</button>
+                          <!-- Trigger/Open The Modal -->
+                          <button class="danger table__row__modal__link" id="deactivate">Desactiver</button>
                         </li>
                       </ul>
                     </div>
@@ -330,10 +293,10 @@
       <!-- Modal content -->
       <div class="modal-content box">
         <header>
-          <span>Désactiver utilisateur</span>
+          <span>Désactiver la classe 6M1</span>
           <span class="close">&times;</span>
         </header>
-        <p>Etes-vous sûr de vouloir désactiver l'utilisateur TENHO Albert ? Il n'apparaitra plus dans la liste des utlisateurs.</p>
+        <p>Etes-vous sûr de vouloir désactiver la classe 6M1 ? Il n'apparaitra plus dans la liste des classes.</p>
         <div class="btns">
           <button class="btn secondary outlined">annuler</button>
           <button class="btn danger">desactiver</button>

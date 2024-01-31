@@ -1,5 +1,7 @@
 <div class="navigation">
-  <span class="navigation__logo">school-lab</span>
+  <a href="#" class="navigation__logo">
+    <img src="/school-app-maquette/assets/images/svg/logo.svg" alt="logo" />
+  </a>
   <div class="navigation__wrapper">
     <div class="navigation__top">
       <ul>
@@ -38,13 +40,46 @@
           </a>
           <ul class="dropdown__menu">
             <li>
-              <a href="#" class="dropdown__item"><span>Item 1</span></a>
+              <a
+                href="/school-app-maquette/students/students-list-empty.php"
+                class="dropdown__item"
+                ><span>Liste eleves (vide)</span></a
+              >
             </li>
             <li>
-              <a href="#" class="dropdown__item"><span>Item 2</span></a>
+              <a
+                href="/school-app-maquette/students/students-list.php"
+                class="dropdown__item"
+                ><span>Liste eleves</span></a
+              >
             </li>
             <li>
-              <a href="#" class="dropdown__item"><span>Item 3</span></a>
+              <a
+                href="/school-app-maquette/students/students-add.php"
+                class="dropdown__item"
+                ><span>Ajouter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/school-app-maquette/students/students-detail.php"
+                class="dropdown__item"
+                ><span>Detail eleve</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/school-app-maquette/students/students-carte.php"
+                class="dropdown__item"
+                ><span>Carte scolaire</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/school-app-maquette/students/students-update.php"
+                class="dropdown__item"
+                ><span>Modification eleve</span></a
+              >
             </li>
           </ul>
         </li>
@@ -66,20 +101,39 @@
           </a>
           <ul class="dropdown__menu">
             <li>
-              <a href="/school-app-maquette/users/users-list-empty.php" class="dropdown__item"
+              <a
+                href="/school-app-maquette/users/users-list-empty.php"
+                class="dropdown__item"
                 ><span>Liste utilisateurs (vide)</span></a
               >
             </li>
             <li>
-              <a href="/school-app-maquette/users/users-list.php" class="dropdown__item"
+              <a
+                href="/school-app-maquette/users/users-list.php"
+                class="dropdown__item"
                 ><span>Liste utilisateurs</span></a
               >
             </li>
             <li>
-              <a href="/school-app-maquette/users/users-add.php" class="dropdown__item"><span>Ajouter</span></a>
+              <a
+                href="/school-app-maquette/users/users-add.php"
+                class="dropdown__item"
+                ><span>Ajouter</span></a
+              >
             </li>
             <li>
-              <a href="/school-app-maquette/users/users-detail.php" class="dropdown__item"><span>Detail utilisateur</span></a>
+              <a
+                href="/school-app-maquette/users/users-detail.php"
+                class="dropdown__item"
+                ><span>Detail utilisateur</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/school-app-maquette/users/users-update.php"
+                class="dropdown__item"
+                ><span>Modification utilisateur</span></a
+              >
             </li>
           </ul>
         </li>
@@ -118,15 +172,15 @@
           </a>
         </li>
         <li>
-          <a href="#" class="navigation__item">
+          <a href="#" class="navigation__item dropdown__btn">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-calendar-check"
-              viewBox="0 0 16 16"
-            >
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-calendar-check"
+                viewBox="0 0 16 16"
+              >
               <path
                 d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"
               />
@@ -136,9 +190,25 @@
             </svg>
             <span>Classes</span>
           </a>
+          <ul class="dropdown__menu">
+            <li>
+              <a
+                href="/school-app-maquette/classes/classes-list-empty.php"
+                class="dropdown__item"
+                ><span>Liste classes (vide)</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/school-app-maquette/classes/classes-list.php"
+                class="dropdown__item"
+                ><span>Liste classes</span></a
+              >
+            </li>
+          </ul>
         </li>
         <li>
-          <a href="#" class="navigation__item">
+          <a href="/school-app-maquette/matieres/gestion-matieres.php" class="navigation__item">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
