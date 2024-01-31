@@ -84,7 +84,7 @@
           </ul>
         </li>
         <li>
-          <a href="#" class="navigation__item">
+          <a href="#" class="navigation__item dropdown__btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -100,6 +100,18 @@
             <span>Finances</span>
           </a>
         </li>
+        <ul class="dropdown__menu">
+            <li>
+              <a href="/school-app-maquette/transactions/transactions-add.php" class="dropdown__item"
+                ><span>Ajouter</span></a
+              >
+            </li>
+            <li>
+              <a href="/school-app-maquette/users/transactions-list.php" class="dropdown__item"
+                ><span>Liste transactions</span></a
+              >
+            </li>
+          </ul>
         <li>
           <a href="#" class="navigation__item">
             <svg
@@ -155,7 +167,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="navigation__item settings">
+          <a href="/school-app-maquette/settings/setting.php" class="navigation__item settings">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

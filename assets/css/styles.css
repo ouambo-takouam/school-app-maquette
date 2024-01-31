@@ -353,9 +353,29 @@ tr:hover {
   margin-bottom: 25px;
 }
 
+
+.data__row__header{
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  gap: 113px;
+}
+
 .form__group {
   flex: 1 0 0;
 }
+
+.form__row_checkbox{
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 16px;
+}
+
+.form__group_checkbox{
+  margin-top: 30px;
+}
+
 
 .data__group {
   width: 40%;
