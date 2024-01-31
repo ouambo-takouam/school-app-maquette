@@ -121,6 +121,7 @@
   /* SHADOWS */
   --shadow-soft: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.06);
   --shadow-authentication: 0 0.25rem 1.5rem 0.25rem rgba(0, 0, 0, 0.1);
+  --shadow-modal: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
 }
 
 /*****--------------------------*****
@@ -199,6 +200,7 @@ td {
 }
 
 th {
+  text-transform: capitalize;
   border-bottom: 1px solid var(--gray-10);
 }
 
@@ -222,12 +224,24 @@ tr:hover {
   margin-right: 30%;
 }
 
+.w-30 {
+  width: 30%;
+}
+
 .w-40 {
   width: 40%;
 }
 
-.w-30 {
-  width: 30%;
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
 }
 
 .border-b {
@@ -327,6 +341,16 @@ tr:hover {
   background: var(--red);
   color: var(--white);
   align-self: flex-start;
+}
+
+.btn.tertiary {
+  background: var(--yellow-dark);
+  color: var(--white)
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
 }
 
 .grouped__btn {
@@ -500,8 +524,10 @@ tr:hover {
 }
 
 .register__wrapper {
+  position: absolute;
+  top: 100px;
+  left: 34%;
   max-width: 33rem;
-  margin: auto;
   padding: 40px;
   background-color: var(--white);
   box-shadow: var(--shadow-authentication);
@@ -575,10 +601,10 @@ tr:hover {
 
 .navigation__logo {
   padding: 1.6rem 0;
-  color: var(--white);
-  font-size: 1.2rem;
-  letter-spacing: 2.7px;
-  text-transform: uppercase;
+}
+
+.navigation__logo img {
+  height: 16px;
 }
 
 .navigation__wrapper {
@@ -811,6 +837,38 @@ header {
   font-weight: 500;
 }
 
+/***----DETAILS NAVIGATION----***/
+.details__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--gray-20);
+}
+
+.details__navigation__links {
+  display: flex;
+  align-items: center;
+}
+
+.details__navigation__item {
+  padding: 10px 30px;
+  font-size: 18px;
+  line-height: 28px; /* 155.556% */
+  text-transform: capitalize;
+  color: var(--gray-80);
+  font-weight: 500;
+}
+
+.details__navigation__item:hover {
+  color: var(--blue-30);
+  border-bottom: 2px solid var(--blue-30);
+}
+
+.details__navigation__item.active {
+  border-bottom: 2px solid var(--blue-80, #100d59);
+  color: var(--blue-80, #100d59);
+}
+
 /*****-----// CONTENT -----*****/
 .content {
   padding: 25px 0;
@@ -820,9 +878,10 @@ header {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 1em;
 }
 
-/*****-----//1. EMPTY LIST -----*****/
+/***---- EMPTY LIST ----****/
 .empty-list {
   width: 40%;
   padding: 20px;
@@ -844,10 +903,9 @@ header {
   line-height: 40px;
 }
 
-/*****-----//2. LIST TABLE -----*****/
+/***----- LIST TABLE ----***/
 .table__container {
   max-width: 1080px;
-  transition: max-width 0.15s ease-out;
   font-family: var(--ff-base);
 }
 
@@ -889,4 +947,145 @@ header {
   padding-left: 24px;
   border-left: 1px solid var(--gray-20);
   color: var(--gray-30);
+}
+
+/*****-------------------*****
+---------9. MODALS ------*****
+*****************************/
+
+/****----// TABLE ROW----****/
+
+.table__row__btn__wrapper {
+  position: relative;
+}
+
+.table__row__btn.active {
+  border-color: var(--blue-30);
+  background-color: var(--blue-5);
+}
+
+.table__row__modal {
+  display: none;
+  position: absolute;
+  box-shadow: var(--shadow-modal);
+  top: 4em;
+  padding: 4px 0;
+  z-index: 999;
+}
+
+.table__row__modal.visible {
+  display: block;
+}
+
+.table__row__modal__link {
+  color: var(--blue-100, #26254d);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  text-align: left;
+  background: white;
+}
+
+.table__row__modal__link.danger {
+  color: var(--red);
+}
+
+.table__row__modal__link:hover {
+  background: var(--gray-10);
+}
+
+.table__row__modal__link.danger:hover {
+  background: #fff1f1;
+}
+
+/** MODAL CSS **/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.modal-content header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  font-size: 24px;
+  line-height: 32px; /* 133.333% */
+}
+
+.modal-content p {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+}
+
+/*****------------------*****
+--------10. MATIERES ---*****
+****************************/
+.matieres__wrapper {
+  display: flex;
+  gap: 2em;
+}
+
+.matieres {
+  display: flex;
+  width: 300px;
+  padding: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px dashed var(--gray-30, #6f7282);
+}
+
+.matieres span {
+  padding: 16px;
+  height: 3em;
+  border-radius: 4px;
+  background: var(--gray-20, #caccd6);
+  cursor: pointer;
 }

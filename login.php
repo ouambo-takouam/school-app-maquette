@@ -34,7 +34,7 @@
         <form action="#" class="login__form">
           <div class="login__form__group">
             <label for="#">Nom d'utilisateur</label>
-            <input type="text" placeholder="gerome-othe" />
+            <input type="text" placeholder="ex: theodore" />
           </div>
           <div class="login__form__group">
             <label for="#">Mot de passe</label>

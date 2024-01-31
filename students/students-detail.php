@@ -13,34 +13,36 @@
 
     <main>
       <header>
-        <div class="header__navigation m-r-30 border-b">
+        <div class="header__navigation m-r-30">
           <a href="/school-app-maquette/users/users-list.php" class="header__backlink">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
             </svg>
-            Liste des utilisateurs
+            Liste des eleves
           </a>
           <div class="header__wrapper">
-            <h1 class="header__title">Albert TENHO</h1>
+            <h1 class="header__title">Denis Norvilus</h1>
           </div>
         </div>
       </header>
 
-      <div class="content">
+      <div class="content w-40">
         <div class="content__wrapper">
-          <div class="sub-header__wrapper w-60">
-            <h1 class="sub-header__title">Profil utilisateur</h1>
+          <div class="details__navigation">
+            <div class="details__navigation__links">
+              <a href="#" class="details__navigation__item active">Details</a>
+              <a href="#" class="details__navigation__item">Discipline</a>
+              <a href="#" class="details__navigation__item">Notes</a>
+              <a href="#" class="details__navigation__item">Carte scolaire</a>
+            </div>
+          </div>
+          
+          <div class="sub-header__wrapper">
+            <h1 class="sub-header__title">Profil eleve</h1>
             <a href="#" class="btn primary">Editer</a>   
           </div>
 
-          <div class="details__navigation w-40">
-            <div class="details__navigation__links">
-              <a href="#" class="details__navigation__item active">Details</a>
-              <a href="#" class="details__navigation__item">Planning</a>
-            </div>
-          </div>
-
-          <div class="box w-40">
+          <div class="box">
             <div class="box__wrapper">
               <div class="box__header">
                 <h2 class="box__title">Details</h2>

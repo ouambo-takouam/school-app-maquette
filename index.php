@@ -9,7 +9,7 @@
   </head>
   <body>
     
-    <?php include 'inc/navigation.php' ?>
+    <?php include_once 'inc/navigation.php' ?>
     
     <!-- JAVASCRIPT CODE -->
     <script src="assets/js/main.js"></script>
