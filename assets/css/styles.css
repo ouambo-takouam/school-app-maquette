@@ -189,7 +189,7 @@ input::placeholder {
 table {
   border-collapse: separate;
   border-spacing: 0;
-  width: 100%;
+  table-layout: auto;
 }
 
 th,
@@ -254,6 +254,7 @@ tr:hover {
   border-radius: 4px;
   background-color: var(--white);
   box-shadow: var(--shadow-soft);
+  min-width: min-content;
 }
 
 .box__wrapper {
@@ -377,9 +378,34 @@ tr:hover {
   margin-bottom: 25px;
 }
 
+
+.data__row__header{
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  gap: 113px;
+}
+
+.data__row__header input{
+  border: 1px solid var(--gray-20);
+  border-radius: 4px;
+}
+
 .form__group {
   flex: 1 0 0;
 }
+
+.form__row_checkbox{
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 16px;
+}
+
+.form__group_checkbox{
+  margin-top: 30px;
+}
+
 
 .data__group {
   width: 40%;
@@ -516,6 +542,11 @@ tr:hover {
 .logo-img {
   margin-bottom: 32px;
   width: 33%;
+}
+
+
+.logo-img-bulletin{
+  width: 5%;
 }
 
 .register__heading {
@@ -1068,4 +1099,38 @@ header {
   border-radius: 4px;
   background: var(--gray-20, #caccd6);
   cursor: pointer;
+}
+
+.bulletin-element{
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.bulletin-element p{
+  font-weight: 500;
+}
+
+.bulletin-block{
+  display: block;
+  border: solid 1px var(--gray-20);
+  border-radius: 4px;
+  padding: 10px;
+
+}
+
+.bulletin-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10rem;
+  width: 80%;
+}
+
+.bulletin-ecrire{
+  width: 20rem;
+  height: 5rem;
+  border: solid 1px var(--gray-20);
+  border-radius: 4px;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
